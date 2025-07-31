@@ -159,8 +159,8 @@ def tokenize(text):
 
 def vectorize(Text, max_length, word_to_idx):
     vocab = {word for word in Text}  
-    encoded = [word_to_idx.get(word, 1) for word in Text]  # 1 = <UNK>
-    return encoded + [0] * (max_length - len(encoded))  # 0 = <PAD>
+    encoded = [word_to_idx.get(word, 1) for word in Text]  # 1 unknown token
+    return encoded + [0] * (max_length - len(encoded))  # 0 padding
 
 
 def preprocess_text(text):
