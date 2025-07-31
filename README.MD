@@ -16,6 +16,15 @@ The models were trained using glove embeddings and regular embedding layers with
 
 ---
 
+## Architecture Overview
+
+The project follows **Clean Architecture** principles by using four layers:
+
+- **Domain Layer**: Defines the input and output classes.
+- **Application Layer**: `TextClassificationService` fro handling prediction logic.
+- **Infrastructure Layer**: Handles model loading.
+- **Presentation Layer**: Endpoints using FastAPI
+
 ## Fast API Endpoints
 
 
@@ -43,7 +52,7 @@ The models were trained using glove embeddings and regular embedding layers with
 1. Open your terminal and run the following command:
 
     ```bash
-    uvicorn main:app --reload
+     uvicorn app.main:app --reload
     ```
 
 2. Once the server is running, open the Swagger UI in your browser:
